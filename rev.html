@@ -1,0 +1,48 @@
+15.Write a program that uses the String object to reverse a given string.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Reverser</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f2f2f2;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 300px;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width:30%;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Reverse a String</h2>
+  <input type="text" id="inputString" placeholder="Enter your string here">
+  <br>
+  <button onclick="reverseString()">Reverse</button>
+
+  <div class="output" id="result"></div>
+
+  <script>
+    function reverseString() {
+      const input = document.getElementById("inputString").value;
+      const reversed = input.split("").reverse().join("");  // String methods
+      document.getElementById("result").innerHTML =
+        <strong>Original:</strong> ${input}<br><strong>Reversed:</strong> ${reversed};
+    }
+  </script>
+
+</body>
+</html>
